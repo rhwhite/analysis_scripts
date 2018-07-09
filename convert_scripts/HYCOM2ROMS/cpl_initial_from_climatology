@@ -1,0 +1,1 @@
+ifort -o init_from_climatology -O3 initial_from_climatology.f90 handle_err.f90 jd.f90 -I/apps/netcdf/3.6.2/include -L/apps/netcdf/3.6.2/lib -lnetcdf

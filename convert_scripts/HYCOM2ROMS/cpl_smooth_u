@@ -1,0 +1,1 @@
+ifort -o smooth_u -O3 smooth_u.f90 handle_err.f90 fill.f90 -I/apps/netcdf/3.6.2/include -L/apps/netcdf/3.6.2/lib -lnetcdf

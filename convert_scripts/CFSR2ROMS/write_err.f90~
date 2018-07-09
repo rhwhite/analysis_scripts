@@ -1,0 +1,6 @@
+subroutine write_err(status)
+  use netcdf
+  integer status
+  write(*,*) 'Error, message = ',status
+  stop "stopped"
+end subroutine write_err

@@ -1,0 +1,1 @@
+ifort -O3 -o write_levels write_model_levels.F90 handle_err.f90 fill.f90 jd.f -I/apps/netcdf/4.1.2/include -L/apps/netcdf/4.1.2/lib -lnetcdff -lnetcdf

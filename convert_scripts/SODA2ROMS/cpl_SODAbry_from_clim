@@ -1,0 +1,1 @@
+ifort -O3 -o bry_from_clim  bry_from_clim.F90 handle_err.f90 -I/apps/netcdf/4.1.2/include -L/apps/netcdf/4.1.2/lib -lnetcdff -lnetcdf

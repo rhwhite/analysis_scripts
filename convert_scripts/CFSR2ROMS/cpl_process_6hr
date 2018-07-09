@@ -1,0 +1,2 @@
+ifort -o process_6hr_rain -O3 process_6hr_rain.f90 handle_err.f90 write_err.f90 jd.f90 -I/apps/netcdf/3.6.2/include -L/apps/netcdf/3.6.2/lib -lnetcdf
+

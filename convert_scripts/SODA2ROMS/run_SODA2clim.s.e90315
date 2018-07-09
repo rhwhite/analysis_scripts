@@ -1,0 +1,7 @@
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+libnetcdff.so.5    00002B488B9EC7D0  Unknown               Unknown  Unknown
+SODA_to_climbc     0000000000409849  Unknown               Unknown  Unknown
+SODA_to_climbc     00000000004094AC  Unknown               Unknown  Unknown
+libc.so.6          00002B488CAA6C16  Unknown               Unknown  Unknown
+SODA_to_climbc     00000000004093A9  Unknown               Unknown  Unknown

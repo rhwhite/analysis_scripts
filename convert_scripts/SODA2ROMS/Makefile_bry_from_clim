@@ -1,0 +1,28 @@
+#
+#                                 Makefile for producing ROMS forcing
+FC = pgf95
+FFLAGS = -O
+#FFLAGS = -g -C -traceback -fpp2
+LIBPATH = /opt/cray/netCDF/3.6.2/netCDF-pgi/lib
+#
+INCLUDE = /opt/cray/netCDF/3.6.2/netCDF-pgi/include
+#
+LIBRARY = netcdf
+#
+TARGETS = all clean
+EXECS   = bry_from_clim
+#
+#
+all: $(EXECS)
+
+bry_from_clim: bry_from_clim.o
+	$(FC) $(FFLAGS) -o $@ bry_from_clim.F90 -O3 handle_err.f90 -I$(INCLUDE) -L$(LIBPATH) -l$(LIBRARY)
+
+bry_from_clim.o: bry_from_clim.F90
+handle_err.o: handle_err.f90
+
+clean:
+	@for name in $(EXECS) ; do\
+	(rm -f $$name $$name.o); \
+
+	done

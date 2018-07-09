@@ -1,0 +1,4 @@
+/var/spool/PBS/mom_priv/jobs/65721.cx2.SC: line 4: cd: /scratch/rw408/HYCOM/HYCOM2ROMS/: No such file or directory
+MPI: r1i2n14: 0x31fd000050f10549: hycom2roms_hor: No such file or directory
+MPI: could not run executable (case #4)
+/opt/pbs/default/bin/mpiexec: line 531: 20455 Killed                  mpirun -f $runfile

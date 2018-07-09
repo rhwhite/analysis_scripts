@@ -1,0 +1,3 @@
+MPI: r1i2n14: 0x31fd000050f1054c: stopped
+MPI: could not run executable (case #4)
+/opt/pbs/default/bin/mpiexec: line 531: 20600 Killed                  mpirun -f $runfile

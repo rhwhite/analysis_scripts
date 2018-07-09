@@ -1,0 +1,12 @@
+! File containing the number of stations and the coordinates (lon lat)
+/scratch/rw408/HYCOM/HYCOM2ROMS/stations.dat
+! Path of the folder containing the HYCOM data
+/scratch/rw408/HYCOM/CONGO/
+! Path and name of the Output NetCDF file
+/scratch/rw408/Input/Angola/Angola_model_V1_hycom_station_012004_7years.nc
+! Year Month and Day of the first day to extract and number of days to extract
+2004 1 1 2559
+! Reference date of the netcdf file
+2003 1 1
+! Polar coordinates YES=1/NO=0
+0

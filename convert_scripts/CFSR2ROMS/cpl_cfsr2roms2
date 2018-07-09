@@ -1,0 +1,1 @@
+ifort -o cfsr2roms2 -O3 cfsr2roms2.f90 handle_err.f90 ssort.f90 jd.f90 gr.f90 -I/apps/netcdf/3.6.2/include -L/apps/netcdf/3.6.2/lib -lnetcdf

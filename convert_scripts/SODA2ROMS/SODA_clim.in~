@@ -1,0 +1,8 @@
+/scratch/rw408/Input_COAWST/ACT_V4/ACT_grid_V4.5.nc
+/scratch/rw408/ForcingData/SODA/SODA2ROMS/filelst_1997_2008.txt
+/scratch/rw408/ForcingData/SODA/DATA/SODA_2.2.0/
+/scratch/rw408/ForcingData/SODA/DATA/SODA_ACT_V4/
+SODA_ACT_V4.5_clim_
+2 4
+30 10.0 0.1 500.0
+1997,6,30

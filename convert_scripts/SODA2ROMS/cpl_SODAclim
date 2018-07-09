@@ -1,0 +1,1 @@
+ifort -O3 -o SODA_to_climbc  SODA_to_climbc.F90 handle_err.f90 fill.f90 jd.f -I/apps/netcdf/4.1.2/include -L/apps/netcdf/4.1.2/lib -lnetcdff -lnetcdf

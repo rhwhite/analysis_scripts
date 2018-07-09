@@ -1,0 +1,17 @@
+#!/bin/sh
+#PBS-lwalltime=72:00:00
+#PBS-lselect=1:ncpus=1:mpiprocs=1:ompthreads=1:mem=23500mb
+module load netcdf
+ulimit -s unlimited
+cd /scratch/rw408/ForcingData/CFSR/CFSR2ROMS
+exec ./smooth_cloud > smooth_cloud.out
+exec ./smooth_dlw > smooth_dlw.out
+exec ./smooth_dsw > smooth_dsw.out
+exec ./smooth_msl > smooth_msl.out
+exec ./smooth_rain > smooth_rain.out
+exec ./smooth_spe_hum > smooth_spe_hum.out
+exec ./smooth_tair > smooth_tair.out
+exec ./smooth_wind > smooth_wind.out
+
+
+

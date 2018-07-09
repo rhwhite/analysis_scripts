@@ -1,0 +1,4 @@
+MPI: error on r1i2n11
+MPI: could not run executable (case #3)
+MPI: No details available, no log files found
+/opt/pbs/default/bin/mpiexec: line 531: 15062 Killed                  mpirun -f $runfile

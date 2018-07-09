@@ -1,0 +1,1 @@
+ifort -o hycom2roms_hor -O3 hycom2roms_hor.f90 handle_err.f90 jd.f90 ssort.f90 -I/apps/netcdf/3.6.2/include -L/apps/netcdf/3.6.2/lib -lnetcdf

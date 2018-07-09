@@ -1,0 +1,15 @@
+ Grid file = /scratch/rw408/Input_COAWST/Ang5km_V2/Angola_grid_5km_V2.nc
+ ROMS Lp, Mp =          204         441
+Writting data for date: 31/12/2003 at  1h
+ Output file 
+ /scratch/rw408/Input_COAWST/Ang5km_V2/Ang5km_V2_CFSR_Dec03_4yrs_ALL.nc
+  is created.
+ Problem with the time: 
+ Wind time:    21600.0000000000     
+ MSL time:   0.000000000000000E+000
+ T2M time:    21600.0000000000     
+ Q2M time:    21600.0000000000     
+ RAIN time:    21600.0000000000     
+ DLW time:    21600.0000000000     
+ DSW time:    21600.0000000000     
+ CLOUD time:    21600.0000000000     

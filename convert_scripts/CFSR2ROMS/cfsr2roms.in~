@@ -1,0 +1,15 @@
+! Input path of the CFSR files
+/scratch/rw408/ForcingData/CFSR/DATA/Angola/6hr_forc/
+! Path and name of the input ROMS grid
+/scratch/rw408/Input_COAWST/Ang5km_V2/Angola_grid_5km_V2.nc
+! Path and start of name of output Atmospheric forcing file
+/scratch/rw408/Input_COAWST/Ang5km_V2/Ang5km_V2_CFSR_Dec03_4yrs
+! Interpolation on the ROMS grid: yes=1/no=0
+0
+! Start date of the simulation: year month day
+2003 12 31
+! End date of the simulation: year month day
+2006 12 31
+! Reference date of the simulation: year month day
+2003 12 31
+

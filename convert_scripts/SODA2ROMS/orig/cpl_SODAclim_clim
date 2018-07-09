@@ -1,0 +1,1 @@
+gfortran -g -o SODA_to_climbc_clim  SODA_to_climbc_clim.F90 -O3 handle_err.f90 fill.f90 jd.f -I/usr/local/include -L/usr/local/lib -lnetcdf

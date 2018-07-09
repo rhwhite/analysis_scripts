@@ -1,0 +1,29 @@
+#
+#                                 Makefile for producing ROMS forcing
+FC = gfortran
+#
+FFLAGS = -O3
+LIBPATH = /usr/local/netcdf-4.1.3/lib
+#
+INCLUDE = /usr/local/netcdf-4.1.3/include
+#
+LIBRARY = netcdf
+#
+TARGETS = all clean
+EXECS   = SODA_to_climbc
+#
+#
+all: $(EXECS)
+#
+SODA_to_climbc: SODA_to_climbc.o
+	$(FC) $(FFLAGS) -o $@ SODA_to_climbc.F90 -O3 handle_err.f90 fill.f90 jd.f -I$(INCLUDE) -L$(LIBPATH) -lnetcdff -l$(LIBRARY)
+#
+SODA_to_climbc.o: SODA_to_climbc.F90
+handle_err.o: handle_err.f90
+fill.o: fill.f90
+jd.o: jd.f
+#
+clean:
+	@for name in $(EXECS) ; do\
+	(rm -f $$name $$name.o); \
+	done

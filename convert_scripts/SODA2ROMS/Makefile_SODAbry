@@ -1,0 +1,27 @@
+#
+#                                 Makefile for producing ROMS forcing
+FC = gfortran
+#
+FFLAGS = -O3
+LIBPATH = /usr/local/netcdf-4.1.3/lib
+#
+INCLUDE = /usr/local/netcdf-4.1.3/include
+#
+LIBRARY = netcdf
+#
+TARGETS = all clean
+EXECS   = bry_from_clim
+#
+#
+all: $(EXECS)
+#
+bry_from_clim: bry_from_clim.o
+	$(FC) $(FFLAGS) -o $@ bry_from_clim.F90 -O3 handle_err.f90 -I$(INCLUDE) -L$(LIBPATH) -lnetcdff -l$(LIBRARY)
+#
+bry_from_clim.o: bry_from_clim.F90
+handle_err.o: handle_err.f90
+#
+clean:
+	@for name in $(EXECS) ; do\
+	(rm -f $$name $$name.o); \
+	done

@@ -1,0 +1,962 @@
+ 
+Imperial College London HPC Service
+-----------------------------------
+Job run_core2roms_6, jobid 90506.cx2, username rw408 - started execution at 21:06:51 Sun 05/01/14 on system r1i3n1
+ 
+ jdref is      2450630
+ jdref_core is      2432564
+ Grid file = /scratch/rw408/Input_COAWST/ACT_V2/ACT_grid_V2.1.nc
+ ROMS Lp, Mp =          823         434
+ nlons,nlats =          192          94
+ min indice to extract in longitude:           64
+ max indice to extract in longitude:          104
+ min indice to extract in latitude:           37
+ max indice to extract in latitude:           57
+ Maximum dimension in longitude :         192
+ Maximum dimension in latitude :          94
+ Output file 
+ /scratch/rw408/Input_COAWST/ACT_V2/ACT_V2_CORE_6hrly_Jul1997_11yr.nc
+  is created.
+ Writing data for date:  1/ 7/1997 at  0h
+ 6hrly itime       72269
+ tday_1   1.12500000000000     
+ 
+ tday_1    1.12500000000000     
+ calling GR with    2450631.12500000     
+ gregorian date is         1997           7           1           3
+ daily itime       18068
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:            1
+ Writing data for date:  1/ 7/1997 at  6h
+ 6hrly itime       72270
+ tday_1   1.37500000000000     
+ 
+ tday_1    1.37500000000000     
+ calling GR with    2450631.37500000     
+ gregorian date is         1997           7           1           9
+ daily itime       18068
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:            2
+ Writing data for date:  1/ 7/1997 at 12h
+ 6hrly itime       72271
+ tday_1   1.62500000000000     
+ 
+ tday_1    1.62500000000000     
+ calling GR with    2450631.62500000     
+ gregorian date is         1997           7           1          15
+ daily itime       18068
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:            3
+ Writing data for date:  1/ 7/1997 at 18h
+ 6hrly itime       72272
+ tday_1   1.87500000000000     
+ 
+ tday_1    1.87500000000000     
+ calling GR with    2450631.87500000     
+ gregorian date is         1997           7           1          21
+ daily itime       18068
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:            4
+ Writing data for date:  2/ 7/1997 at  0h
+ 6hrly itime       72273
+ tday_1   2.12500000000000     
+ 
+ tday_1    2.12500000000000     
+ calling GR with    2450632.12500000     
+ gregorian date is         1997           7           2           3
+ daily itime       18069
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:            5
+ Writing data for date:  2/ 7/1997 at  6h
+ 6hrly itime       72274
+ tday_1   2.37500000000000     
+ 
+ tday_1    2.37500000000000     
+ calling GR with    2450632.37500000     
+ gregorian date is         1997           7           2           9
+ daily itime       18069
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:            6
+ Writing data for date:  2/ 7/1997 at 12h
+ 6hrly itime       72275
+ tday_1   2.62500000000000     
+ 
+ tday_1    2.62500000000000     
+ calling GR with    2450632.62500000     
+ gregorian date is         1997           7           2          15
+ daily itime       18069
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:            7
+ Writing data for date:  2/ 7/1997 at 18h
+ 6hrly itime       72276
+ tday_1   2.87500000000000     
+ 
+ tday_1    2.87500000000000     
+ calling GR with    2450632.87500000     
+ gregorian date is         1997           7           2          21
+ daily itime       18069
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:            8
+ Writing data for date:  3/ 7/1997 at  0h
+ 6hrly itime       72277
+ tday_1   3.12500000000000     
+ 
+ tday_1    3.12500000000000     
+ calling GR with    2450633.12500000     
+ gregorian date is         1997           7           3           3
+ daily itime       18070
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:            9
+ Writing data for date:  3/ 7/1997 at  6h
+ 6hrly itime       72278
+ tday_1   3.37500000000000     
+ 
+ tday_1    3.37500000000000     
+ calling GR with    2450633.37500000     
+ gregorian date is         1997           7           3           9
+ daily itime       18070
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:           10
+ Writing data for date:  3/ 7/1997 at 12h
+ 6hrly itime       72279
+ tday_1   3.62500000000000     
+ 
+ tday_1    3.62500000000000     
+ calling GR with    2450633.62500000     
+ gregorian date is         1997           7           3          15
+ daily itime       18070
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:           11
+ Writing data for date:  3/ 7/1997 at 18h
+ 6hrly itime       72280
+ tday_1   3.87500000000000     
+ 
+ tday_1    3.87500000000000     
+ calling GR with    2450633.87500000     
+ gregorian date is         1997           7           3          21
+ daily itime       18070
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:           12
+ Writing data for date:  4/ 7/1997 at  0h
+ 6hrly itime       72281
+ tday_1   4.12500000000000     
+ 
+ tday_1    4.12500000000000     
+ calling GR with    2450634.12500000     
+ gregorian date is         1997           7           4           3
+ daily itime       18071
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:           13
+ Writing data for date:  4/ 7/1997 at  6h
+ 6hrly itime       72282
+ tday_1   4.37500000000000     
+ 
+ tday_1    4.37500000000000     
+ calling GR with    2450634.37500000     
+ gregorian date is         1997           7           4           9
+ daily itime       18071
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:           14
+ Writing data for date:  4/ 7/1997 at 12h
+ 6hrly itime       72283
+ tday_1   4.62500000000000     
+ 
+ tday_1    4.62500000000000     
+ calling GR with    2450634.62500000     
+ gregorian date is         1997           7           4          15
+ daily itime       18071
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:           15
+ Writing data for date:  4/ 7/1997 at 18h
+ 6hrly itime       72284
+ tday_1   4.87500000000000     
+ 
+ tday_1    4.87500000000000     
+ calling GR with    2450634.87500000     
+ gregorian date is         1997           7           4          21
+ daily itime       18071
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:           16
+ Writing data for date:  5/ 7/1997 at  0h
+ 6hrly itime       72285
+ tday_1   5.12500000000000     
+ 
+ tday_1    5.12500000000000     
+ calling GR with    2450635.12500000     
+ gregorian date is         1997           7           5           3
+ daily itime       18072
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:           17
+ Writing data for date:  5/ 7/1997 at  6h
+ 6hrly itime       72286
+ tday_1   5.37500000000000     
+ 
+ tday_1    5.37500000000000     
+ calling GR with    2450635.37500000     
+ gregorian date is         1997           7           5           9
+ daily itime       18072
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:           18
+ Writing data for date:  5/ 7/1997 at 12h
+ 6hrly itime       72287
+ tday_1   5.62500000000000     
+ 
+ tday_1    5.62500000000000     
+ calling GR with    2450635.62500000     
+ gregorian date is         1997           7           5          15
+ daily itime       18072
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:           19
+ Writing data for date:  5/ 7/1997 at 18h
+ 6hrly itime       72288
+ tday_1   5.87500000000000     
+ 
+ tday_1    5.87500000000000     
+ calling GR with    2450635.87500000     
+ gregorian date is         1997           7           5          21
+ daily itime       18072
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:           20
+ Writing data for date:  6/ 7/1997 at  0h
+ 6hrly itime       72289
+ tday_1   6.12500000000000     
+ 
+ tday_1    6.12500000000000     
+ calling GR with    2450636.12500000     
+ gregorian date is         1997           7           6           3
+ daily itime       18073
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:           21
+ Writing data for date:  6/ 7/1997 at  6h
+ 6hrly itime       72290
+ tday_1   6.37500000000000     
+ 
+ tday_1    6.37500000000000     
+ calling GR with    2450636.37500000     
+ gregorian date is         1997           7           6           9
+ daily itime       18073
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:           22
+ Writing data for date:  6/ 7/1997 at 12h
+ 6hrly itime       72291
+ tday_1   6.62500000000000     
+ 
+ tday_1    6.62500000000000     
+ calling GR with    2450636.62500000     
+ gregorian date is         1997           7           6          15
+ daily itime       18073
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:           23
+ Writing data for date:  6/ 7/1997 at 18h
+ 6hrly itime       72292
+ tday_1   6.87500000000000     
+ 
+ tday_1    6.87500000000000     
+ calling GR with    2450636.87500000     
+ gregorian date is         1997           7           6          21
+ daily itime       18073
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:           24
+ Writing data for date:  7/ 7/1997 at  0h
+ 6hrly itime       72293
+ tday_1   7.12500000000000     
+ 
+ tday_1    7.12500000000000     
+ calling GR with    2450637.12500000     
+ gregorian date is         1997           7           7           3
+ daily itime       18074
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:           25
+ Writing data for date:  7/ 7/1997 at  6h
+ 6hrly itime       72294
+ tday_1   7.37500000000000     
+ 
+ tday_1    7.37500000000000     
+ calling GR with    2450637.37500000     
+ gregorian date is         1997           7           7           9
+ daily itime       18074
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:           26
+ Writing data for date:  7/ 7/1997 at 12h
+ 6hrly itime       72295
+ tday_1   7.62500000000000     
+ 
+ tday_1    7.62500000000000     
+ calling GR with    2450637.62500000     
+ gregorian date is         1997           7           7          15
+ daily itime       18074
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:           27
+ Writing data for date:  7/ 7/1997 at 18h
+ 6hrly itime       72296
+ tday_1   7.87500000000000     
+ 
+ tday_1    7.87500000000000     
+ calling GR with    2450637.87500000     
+ gregorian date is         1997           7           7          21
+ daily itime       18074
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:           28
+ Writing data for date:  8/ 7/1997 at  0h
+ 6hrly itime       72297
+ tday_1   8.12500000000000     
+ 
+ tday_1    8.12500000000000     
+ calling GR with    2450638.12500000     
+ gregorian date is         1997           7           8           3
+ daily itime       18075
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:           29
+ Writing data for date:  8/ 7/1997 at  6h
+ 6hrly itime       72298
+ tday_1   8.37500000000000     
+ 
+ tday_1    8.37500000000000     
+ calling GR with    2450638.37500000     
+ gregorian date is         1997           7           8           9
+ daily itime       18075
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:           30
+ Writing data for date:  8/ 7/1997 at 12h
+ 6hrly itime       72299
+ tday_1   8.62500000000000     
+ 
+ tday_1    8.62500000000000     
+ calling GR with    2450638.62500000     
+ gregorian date is         1997           7           8          15
+ daily itime       18075
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:           31
+ Writing data for date:  8/ 7/1997 at 18h
+ 6hrly itime       72300
+ tday_1   8.87500000000000     
+ 
+ tday_1    8.87500000000000     
+ calling GR with    2450638.87500000     
+ gregorian date is         1997           7           8          21
+ daily itime       18075
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:           32
+ Writing data for date:  9/ 7/1997 at  0h
+ 6hrly itime       72301
+ tday_1   9.12500000000000     
+ 
+ tday_1    9.12500000000000     
+ calling GR with    2450639.12500000     
+ gregorian date is         1997           7           9           3
+ daily itime       18076
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:           33
+ Writing data for date:  9/ 7/1997 at  6h
+ 6hrly itime       72302
+ tday_1   9.37500000000000     
+ 
+ tday_1    9.37500000000000     
+ calling GR with    2450639.37500000     
+ gregorian date is         1997           7           9           9
+ daily itime       18076
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:           34
+ Writing data for date:  9/ 7/1997 at 12h
+ 6hrly itime       72303
+ tday_1   9.62500000000000     
+ 
+ tday_1    9.62500000000000     
+ calling GR with    2450639.62500000     
+ gregorian date is         1997           7           9          15
+ daily itime       18076
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:           35
+ Writing data for date:  9/ 7/1997 at 18h
+ 6hrly itime       72304
+ tday_1   9.87500000000000     
+ 
+ tday_1    9.87500000000000     
+ calling GR with    2450639.87500000     
+ gregorian date is         1997           7           9          21
+ daily itime       18076
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:           36
+ Writing data for date: 10/ 7/1997 at  0h
+ 6hrly itime       72305
+ tday_1   10.1250000000000     
+ 
+ tday_1    10.1250000000000     
+ calling GR with    2450640.12500000     
+ gregorian date is         1997           7          10           3
+ daily itime       18077
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:           37
+ Writing data for date: 10/ 7/1997 at  6h
+ 6hrly itime       72306
+ tday_1   10.3750000000000     
+ 
+ tday_1    10.3750000000000     
+ calling GR with    2450640.37500000     
+ gregorian date is         1997           7          10           9
+ daily itime       18077
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:           38
+ Writing data for date: 10/ 7/1997 at 12h
+ 6hrly itime       72307
+ tday_1   10.6250000000000     
+ 
+ tday_1    10.6250000000000     
+ calling GR with    2450640.62500000     
+ gregorian date is         1997           7          10          15
+ daily itime       18077
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:           39
+ Writing data for date: 10/ 7/1997 at 18h
+ 6hrly itime       72308
+ tday_1   10.8750000000000     
+ 
+ tday_1    10.8750000000000     
+ calling GR with    2450640.87500000     
+ gregorian date is         1997           7          10          21
+ daily itime       18077
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:           40
+ Writing data for date: 11/ 7/1997 at  0h
+ 6hrly itime       72309
+ tday_1   11.1250000000000     
+ 
+ tday_1    11.1250000000000     
+ calling GR with    2450641.12500000     
+ gregorian date is         1997           7          11           3
+ daily itime       18078
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:           41
+ Writing data for date: 11/ 7/1997 at  6h
+ 6hrly itime       72310
+ tday_1   11.3750000000000     
+ 
+ tday_1    11.3750000000000     
+ calling GR with    2450641.37500000     
+ gregorian date is         1997           7          11           9
+ daily itime       18078
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:           42
+ Writing data for date: 11/ 7/1997 at 12h
+ 6hrly itime       72311
+ tday_1   11.6250000000000     
+ 
+ tday_1    11.6250000000000     
+ calling GR with    2450641.62500000     
+ gregorian date is         1997           7          11          15
+ daily itime       18078
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:           43
+ Writing data for date: 11/ 7/1997 at 18h
+ 6hrly itime       72312
+ tday_1   11.8750000000000     
+ 
+ tday_1    11.8750000000000     
+ calling GR with    2450641.87500000     
+ gregorian date is         1997           7          11          21
+ daily itime       18078
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:           44
+ Writing data for date: 12/ 7/1997 at  0h
+ 6hrly itime       72313
+ tday_1   12.1250000000000     
+ 
+ tday_1    12.1250000000000     
+ calling GR with    2450642.12500000     
+ gregorian date is         1997           7          12           3
+ daily itime       18079
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:           45
+ Writing data for date: 12/ 7/1997 at  6h
+ 6hrly itime       72314
+ tday_1   12.3750000000000     
+ 
+ tday_1    12.3750000000000     
+ calling GR with    2450642.37500000     
+ gregorian date is         1997           7          12           9
+ daily itime       18079
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:           46
+ Writing data for date: 12/ 7/1997 at 12h
+ 6hrly itime       72315
+ tday_1   12.6250000000000     
+ 
+ tday_1    12.6250000000000     
+ calling GR with    2450642.62500000     
+ gregorian date is         1997           7          12          15
+ daily itime       18079
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:           47
+ Writing data for date: 12/ 7/1997 at 18h
+ 6hrly itime       72316
+ tday_1   12.8750000000000     
+ 
+ tday_1    12.8750000000000     
+ calling GR with    2450642.87500000     
+ gregorian date is         1997           7          12          21
+ daily itime       18079
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:           48
+ Writing data for date: 13/ 7/1997 at  0h
+ 6hrly itime       72317
+ tday_1   13.1250000000000     
+ 
+ tday_1    13.1250000000000     
+ calling GR with    2450643.12500000     
+ gregorian date is         1997           7          13           3
+ daily itime       18080
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:           49
+ Writing data for date: 13/ 7/1997 at  6h
+ 6hrly itime       72318
+ tday_1   13.3750000000000     
+ 
+ tday_1    13.3750000000000     
+ calling GR with    2450643.37500000     
+ gregorian date is         1997           7          13           9
+ daily itime       18080
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:           50
+ Writing data for date: 13/ 7/1997 at 12h
+ 6hrly itime       72319
+ tday_1   13.6250000000000     
+ 
+ tday_1    13.6250000000000     
+ calling GR with    2450643.62500000     
+ gregorian date is         1997           7          13          15
+ daily itime       18080
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:           51
+ Writing data for date: 13/ 7/1997 at 18h
+ 6hrly itime       72320
+ tday_1   13.8750000000000     
+ 
+ tday_1    13.8750000000000     
+ calling GR with    2450643.87500000     
+ gregorian date is         1997           7          13          21
+ daily itime       18080
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:           52
+ Writing data for date: 14/ 7/1997 at  0h
+ 6hrly itime       72321
+ tday_1   14.1250000000000     
+ 
+ tday_1    14.1250000000000     
+ calling GR with    2450644.12500000     
+ gregorian date is         1997           7          14           3
+ daily itime       18081
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:           53
+ Writing data for date: 14/ 7/1997 at  6h
+ 6hrly itime       72322
+ tday_1   14.3750000000000     
+ 
+ tday_1    14.3750000000000     
+ calling GR with    2450644.37500000     
+ gregorian date is         1997           7          14           9
+ daily itime       18081
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:           54
+ Writing data for date: 14/ 7/1997 at 12h
+ 6hrly itime       72323
+ tday_1   14.6250000000000     
+ 
+ tday_1    14.6250000000000     
+ calling GR with    2450644.62500000     
+ gregorian date is         1997           7          14          15
+ daily itime       18081
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:           55
+ Writing data for date: 14/ 7/1997 at 18h
+ 6hrly itime       72324
+ tday_1   14.8750000000000     
+ 
+ tday_1    14.8750000000000     
+ calling GR with    2450644.87500000     
+ gregorian date is         1997           7          14          21
+ daily itime       18081
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:           56
+ Writing data for date: 15/ 7/1997 at  0h
+ 6hrly itime       72325
+ tday_1   15.1250000000000     
+ 
+ tday_1    15.1250000000000     
+ calling GR with    2450645.12500000     
+ gregorian date is         1997           7          15           3
+ daily itime       18082
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:           57
+ Writing data for date: 15/ 7/1997 at  6h
+ 6hrly itime       72326
+ tday_1   15.3750000000000     
+ 
+ tday_1    15.3750000000000     
+ calling GR with    2450645.37500000     
+ gregorian date is         1997           7          15           9
+ daily itime       18082
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:           58
+ Writing data for date: 15/ 7/1997 at 12h
+ 6hrly itime       72327
+ tday_1   15.6250000000000     
+ 
+ tday_1    15.6250000000000     
+ calling GR with    2450645.62500000     
+ gregorian date is         1997           7          15          15
+ daily itime       18082
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:           59
+ Writing data for date: 15/ 7/1997 at 18h
+ 6hrly itime       72328
+ tday_1   15.8750000000000     
+ 
+ tday_1    15.8750000000000     
+ calling GR with    2450645.87500000     
+ gregorian date is         1997           7          15          21
+ daily itime       18082
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:           60
+ Writing data for date: 16/ 7/1997 at  0h
+ 6hrly itime       72329
+ tday_1   16.1250000000000     
+ 
+ tday_1    16.1250000000000     
+ calling GR with    2450646.12500000     
+ gregorian date is         1997           7          16           3
+ daily itime       18083
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:           61
+ Writing data for date: 16/ 7/1997 at  6h
+ 6hrly itime       72330
+ tday_1   16.3750000000000     
+ 
+ tday_1    16.3750000000000     
+ calling GR with    2450646.37500000     
+ gregorian date is         1997           7          16           9
+ daily itime       18083
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:           62
+ Writing data for date: 16/ 7/1997 at 12h
+ 6hrly itime       72331
+ tday_1   16.6250000000000     
+ 
+ tday_1    16.6250000000000     
+ calling GR with    2450646.62500000     
+ gregorian date is         1997           7          16          15
+ daily itime       18083
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:           63
+ Writing data for date: 16/ 7/1997 at 18h
+ 6hrly itime       72332
+ tday_1   16.8750000000000     
+ 
+ tday_1    16.8750000000000     
+ calling GR with    2450646.87500000     
+ gregorian date is         1997           7          16          21
+ daily itime       18083
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:           64
+ Writing data for date: 17/ 7/1997 at  0h
+ 6hrly itime       72333
+ tday_1   17.1250000000000     
+ 
+ tday_1    17.1250000000000     
+ calling GR with    2450647.12500000     
+ gregorian date is         1997           7          17           3
+ daily itime       18084
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:           65
+ Writing data for date: 17/ 7/1997 at  6h
+ 6hrly itime       72334
+ tday_1   17.3750000000000     
+ 
+ tday_1    17.3750000000000     
+ calling GR with    2450647.37500000     
+ gregorian date is         1997           7          17           9
+ daily itime       18084
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:           66
+ Writing data for date: 17/ 7/1997 at 12h
+ 6hrly itime       72335
+ tday_1   17.6250000000000     
+ 
+ tday_1    17.6250000000000     
+ calling GR with    2450647.62500000     
+ gregorian date is         1997           7          17          15
+ daily itime       18084
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:           67
+ Writing data for date: 17/ 7/1997 at 18h
+ 6hrly itime       72336
+ tday_1   17.8750000000000     
+ 
+ tday_1    17.8750000000000     
+ calling GR with    2450647.87500000     
+ gregorian date is         1997           7          17          21
+ daily itime       18084
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:           68
+ Writing data for date: 18/ 7/1997 at  0h
+ 6hrly itime       72337
+ tday_1   18.1250000000000     
+ 
+ tday_1    18.1250000000000     
+ calling GR with    2450648.12500000     
+ gregorian date is         1997           7          18           3
+ daily itime       18085
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:           69
+ Writing data for date: 18/ 7/1997 at  6h
+ 6hrly itime       72338
+ tday_1   18.3750000000000     
+ 
+ tday_1    18.3750000000000     
+ calling GR with    2450648.37500000     
+ gregorian date is         1997           7          18           9
+ daily itime       18085
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:           70
+ Writing data for date: 18/ 7/1997 at 12h
+ 6hrly itime       72339
+ tday_1   18.6250000000000     
+ 
+ tday_1    18.6250000000000     
+ calling GR with    2450648.62500000     
+ gregorian date is         1997           7          18          15
+ daily itime       18085
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:           71
+ Writing data for date: 18/ 7/1997 at 18h
+ 6hrly itime       72340
+ tday_1   18.8750000000000     
+ 
+ tday_1    18.8750000000000     
+ calling GR with    2450648.87500000     
+ gregorian date is         1997           7          18          21
+ daily itime       18085
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:           72
+ Writing data for date: 19/ 7/1997 at  0h
+ 6hrly itime       72341
+ tday_1   19.1250000000000     
+ 
+ tday_1    19.1250000000000     
+ calling GR with    2450649.12500000     
+ gregorian date is         1997           7          19           3
+ daily itime       18086
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:           73
+ Writing data for date: 19/ 7/1997 at  6h
+ 6hrly itime       72342
+ tday_1   19.3750000000000     
+ 
+ tday_1    19.3750000000000     
+ calling GR with    2450649.37500000     
+ gregorian date is         1997           7          19           9
+ daily itime       18086
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:           74
+ Writing data for date: 19/ 7/1997 at 12h
+ 6hrly itime       72343
+ tday_1   19.6250000000000     
+ 
+ tday_1    19.6250000000000     
+ calling GR with    2450649.62500000     
+ gregorian date is         1997           7          19          15
+ daily itime       18086
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:           75
+ Writing data for date: 19/ 7/1997 at 18h
+ 6hrly itime       72344
+ tday_1   19.8750000000000     
+ 
+ tday_1    19.8750000000000     
+ calling GR with    2450649.87500000     
+ gregorian date is         1997           7          19          21
+ daily itime       18086
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:           76
+ Writing data for date: 20/ 7/1997 at  0h
+ 6hrly itime       72345
+ tday_1   20.1250000000000     
+ 
+ tday_1    20.1250000000000     
+ calling GR with    2450650.12500000     
+ gregorian date is         1997           7          20           3
+ daily itime       18087
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:           77
+ Writing data for date: 20/ 7/1997 at  6h
+ 6hrly itime       72346
+ tday_1   20.3750000000000     
+ 
+ tday_1    20.3750000000000     
+ calling GR with    2450650.37500000     
+ gregorian date is         1997           7          20           9
+ daily itime       18087
+ monthly itime         595
+ itime is          595
+ date4 is   2450645.50000000     
+ Output file record is:           78
+ Writing data for date: 20/ 7/1997 at 12h
+ 6hrly itime       72347
+ 
+Imperial College London HPC Service
+-----------------------------------
+Job run_core2roms_6, jobid 90506.cx2, username rw408 - end of execution at 21:07:18 Sun 05/01/14 on system r1i3n1
+ 

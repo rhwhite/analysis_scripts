@@ -1,0 +1,1 @@
+ifort -o hycom2roms_vert -O3 hycom2roms_vert.f90 handle_err.f90 -I/apps/netcdf/3.6.2/include -L/apps/netcdf/3.6.2/lib -lnetcdf

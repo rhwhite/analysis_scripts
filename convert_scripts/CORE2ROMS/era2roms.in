@@ -1,0 +1,15 @@
+! Input path of the ERA files
+/scratch/rw408/ForcingData/ERA/DATA/
+! Path and name of the input ROMS grid
+/scratch/rw408/Input_COAWST/Nam5km_V1/Namibia_grid_5km_V1.nc
+! Path and name of the output Atmospheric forcing file
+/scratch/rw408/Input_COAWST/Nam5km_V1/Nam5km_V1_erai_01Jan04_4yr.nc
+! Interpolation on the ROMS grid: yes=1/no=0
+1
+! Start date of the simulation: year month day
+2004 1 1
+! End date of the simulation: year month day
+2008 1 1
+! Reference date of the simulation: year month day
+2003 12 31
+

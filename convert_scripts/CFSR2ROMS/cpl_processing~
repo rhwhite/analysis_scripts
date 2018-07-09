@@ -1,0 +1,2 @@
+ifort -o process_cloud -O3 process_cloud.f90 handle_err.f90 write_err.f90 jd.f90 -I/apps/netcdf/3.6.2/include -L/apps/netcdf/3.6.2/lib -lnetcdf
+

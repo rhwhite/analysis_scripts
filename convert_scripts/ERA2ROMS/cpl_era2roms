@@ -1,0 +1,1 @@
+ifort -o era2roms -O3 era2roms.f90 handle_err.f90 fill.f90 smooth_polar.f90 ssort.f90 jd.f90 spec_hum.f90 gr.f90 -I/apps/netcdf/3.6.2/include -L/apps/netcdf/3.6.2/lib -lnetcdf

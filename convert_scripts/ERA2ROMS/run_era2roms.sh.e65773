@@ -1,0 +1,4 @@
+/var/spool/PBS/mom_priv/jobs/65773.cx2.SC: line 4: cd: /scratch/rw408/ERA/ERA2ROMS/: No such file or directory
+MPI: r1i2n10: 0x4646000050f17327: era2roms: No such file or directory
+MPI: could not run executable (case #4)
+/opt/pbs/default/bin/mpiexec: line 531: 22154 Killed                  mpirun -f $runfile

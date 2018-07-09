@@ -1,0 +1,8 @@
+ifort -o process_cloud -O3 process_cloud.f90 handle_err.f90 write_err.f90 jd.f90 -I/apps/netcdf/3.6.2/include -L/apps/netcdf/3.6.2/lib -lnetcdf
+ifort -o process_dlw -O3 process_dlw.f90 handle_err.f90 write_err.f90 jd.f90 -I/apps/netcdf/3.6.2/include -L/apps/netcdf/3.6.2/lib -lnetcdf
+ifort -o process_dsw -O3 process_dsw.f90 handle_err.f90 write_err.f90 jd.f90 -I/apps/netcdf/3.6.2/include -L/apps/netcdf/3.6.2/lib -lnetcdf
+ifort -o process_msl -O3 process_msl.f90 handle_err.f90 write_err.f90 jd.f90 -I/apps/netcdf/3.6.2/include -L/apps/netcdf/3.6.2/lib -lnetcdf
+ifort -o process_rain -O3 process_rain.f90 handle_err.f90 write_err.f90 jd.f90 -I/apps/netcdf/3.6.2/include -L/apps/netcdf/3.6.2/lib -lnetcdf
+ifort -o process_spe_hum -O3 process_spe_hum.f90 handle_err.f90 write_err.f90 jd.f90 -I/apps/netcdf/3.6.2/include -L/apps/netcdf/3.6.2/lib -lnetcdf
+ifort -o process_tair -O3 process_tair.f90 handle_err.f90 write_err.f90 jd.f90 -I/apps/netcdf/3.6.2/include -L/apps/netcdf/3.6.2/lib -lnetcdf
+ifort -o process_wind -O3 process_wind.f90 handle_err.f90 write_err.f90 jd.f90 -I/apps/netcdf/3.6.2/include -L/apps/netcdf/3.6.2/lib -lnetcdf

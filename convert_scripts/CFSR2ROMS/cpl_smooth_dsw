@@ -1,0 +1,1 @@
+ifort -o smooth_dsw -O3 smooth_dsw.f90 handle_err.f90 fill.f90 smooth_polar.f90 jd.f90 -I/apps/netcdf/3.6.2/include -L/apps/netcdf/3.6.2/lib -lnetcdf
