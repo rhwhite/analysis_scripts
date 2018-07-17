@@ -14,7 +14,7 @@ printf -v yrend "%04d" 100
 echo $yrstart
 
 cd ${dir}/${exp}/ocn/hist/
-ncrcat -O -d z_t,0,0 -d transport_reg,1,1 -v MOC,HMXL,RHO,SALT,TEMP,BSF,N_HEAT,N_SALT,TAUX,TAUY,TAREA raw/${exp}.pop.h.0* cat_limited_${exp}.pop.h.${yrstart}-${yrend}.nc
+ncrcat -O -d z_t,0,0 -d transport_reg,1,1 -v MOC,HMXL,RHO,SALT,TEMP,BSF,N_HEAT,N_SALT,TAUX,TAUY,TAREA,ROFF_F raw/${exp}.pop.h.0* cat_limited_${exp}.pop.h.${yrstart}-${yrend}.nc
 
 # Average over transport_ref dimension to get rid of it
 ncwa -O -a transport_reg cat_limited_${exp}.pop.h.${yrstart}-${yrend}.nc cat_limited_${exp}.pop.h.${yrstart}-${yrend}.nc
