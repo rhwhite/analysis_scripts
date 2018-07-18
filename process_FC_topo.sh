@@ -39,7 +39,7 @@ for iyear in `seq -f "%04g" $yrstart $yrend`; do
     mv ${exp}.pop.h.${iyear}-??.nc toavg
 done
 
-#ncrcat -O -d z_t,0,0 -d transport_reg,1,1 -v MOC,HMXL,RHO,SALT,TEMP,BSF,N_HEAT,N_SALT,TAUX,TAUY,TAREA,ROFF_F toavg/${exp}.pop.h.0* ../cat_limited_${exp}.pop.h.${styrstart}-${styrend}.nc
+ncrcat -O -d z_t,0,0 -d transport_reg,1,1 -v MOC,HMXL,RHO,SALT,TEMP,BSF,N_HEAT,N_SALT,TAUX,TAUY,TAREA,ROFF_F toavg/${exp}.pop.h.0* ../cat_limited_${exp}.pop.h.${styrstart}-${styrend}.nc
 
 # move everything back out of toavg directory
 mv toavg/* .
