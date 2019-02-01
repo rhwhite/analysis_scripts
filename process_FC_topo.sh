@@ -24,7 +24,7 @@ climend=300
 version="cam"
 
 runocn=1
-runatm=1
+runatm=0
 
 printf -v styrstart "%04d" $yrstart
 printf -v styrend "%04d" $yrend
@@ -49,10 +49,27 @@ if [ $runocn -eq 1 ]; then
         mv limited_${exp}.pop.h.${iyear}-??.nc toavg
     done
 
+    # Select individual regions for MOC and rename
+    # only because CDO cannot deal with 5 dimensional files
     ncrcat -O -d z_t,0,0 -d transport_reg,1,1 -v MOC,HMXL,RHO,SALT,TEMP,BSF,N_HEAT,N_SALT,TAUX,TAUY,ROFF_F toavg/limited_${exp}.pop.h.0* ../cat_limited_${exp}.pop.h.${styrstart}-${styrend}.nc
 
     ncrcat -O -d z_t,0,0 -d transport_reg,0,0 -v MOC toavg/limited_${exp}.pop.h.0* ../cat_MOC_${exp}.pop.h.${styrstart}-${styrend}.nc
 
+    # rename MOC to AMOC as we have selected only the Atlantic (plus Med etc) region
+    ncrename -v MOC,AMOC ../cat_limited_${exp}.pop.h.${styrstart}-${styrend}.nc
+    ncrename -v MOC,GlobalMOC ../cat_MOC_${exp}.pop.h.${styrstart}-${styrend}.nc
+
+    # add in Global MOC from other file
+    ncks -A -v GlobalMOC ../cat_MOC_${exp}.pop.h.${styrstart}-${styrend}.nc ../cat_limited_${exp}.pop.h.${styrstart}-${styrend}.nc
+
+    # Add in metadata so these data are not lost
+    ncatted -O -a long_name,AMOC,a,c,"AMOC regions = Atlantic Ocean + Mediterranean Sea + Labrador Sea + GIN Sea + Arctic Ocean + Hudson Bay\n" ../cat_limited_${exp}.pop.h.${styrstart}-${styrend}.nc
+
+    ncatted -O -a long_name,GlobalMOC,a,c,"GlobalMOC regions = Global Ocean - Marginal Seas\n" ../cat_limited_${exp}.pop.h.${styrstart}-${styrend}.nc
+
+    # Delete other file
+    rm ../cat_MOC_limited_${exp}.pop.h.${styrstart}-${styrend}.nc
+    
     # move everything back out of toavg directory
     mv toavg/* .
 
@@ -60,11 +77,11 @@ if [ $runocn -eq 1 ]; then
     cd ../
     # Average over transport_ref dimension to get rid of it
     ncwa -O -a transport_reg cat_limited_${exp}.pop.h.${styrstart}-${styrend}.nc cat_limited_${exp}.pop.h.${styrstart}-${styrend}.nc
-    ncwa -O -a transport_reg cat_MOC_${exp}.pop.h.${styrstart}-${styrend}.nc cat_MOC_${exp}.pop.h.${styrstart}-${styrend}.nc
+    #ncwa -O -a transport_reg cat_MOC_${exp}.pop.h.${styrstart}-${styrend}.nc cat_MOC_${exp}.pop.h.${styrstart}-${styrend}.nc
 
     # Calculate annual mean with Shifttime to get correct months (otherwise cdo reads end of Jan as 1-Feb)
     cdo yearmonmean -shifttime,-1mo cat_limited_${exp}.pop.h.${styrstart}-${styrend}.nc annmean_limited_${exp}.pop.h.${styrstart}-${styrend}.nc
-    cdo yearmonmean -shifttime,-1mo cat_MOC_${exp}.pop.h.${styrstart}-${styrend}.nc annmean_MOC_${exp}.pop.h.${styrstart}-${styrend}.nc
+    #cdo yearmonmean -shifttime,-1mo cat_MOC_${exp}.pop.h.${styrstart}-${styrend}.nc annmean_MOC_${exp}.pop.h.${styrstart}-${styrend}.nc
 
     # Make monthly averages, using yearmonmean to take into account monthly weighting
     # Need to shifttime BEFORE selecting month, which means putting it AFTER in the command
@@ -73,23 +90,23 @@ if [ $runocn -eq 1 ]; then
     cdo yearmonmean -selmon,6,7,8 -shifttime,-1mo cat_limited_${exp}.pop.h.${styrstart}-${styrend}.nc JJAmean_limited_${exp}.pop.h.${styrstart}-${styrend}.nc
     cdo yearmonmean -selmon,9,10,11 -shifttime,-1mo cat_limited_${exp}.pop.h.${styrstart}-${styrend}.nc SONmean_limited_${exp}.pop.h.${styrstart}-${styrend}.nc
 
-    cdo yearmonmean -selmon,1,2,12 -shifttime,-1mo cat_MOC_${exp}.pop.h.${styrstart}-${styrend}.nc DJFmean_MOC_${exp}.pop.h.${styrstart}-${styrend}.nc
-    cdo yearmonmean -selmon,3,4,5 -shifttime,-1mo cat_MOC_${exp}.pop.h.${styrstart}-${styrend}.nc MAMmean_MOC_${exp}.pop.h.${styrstart}-${styrend}.nc
-    cdo yearmonmean -selmon,6,7,8 -shifttime,-1mo cat_MOC_${exp}.pop.h.${styrstart}-${styrend}.nc JJAmean_MOC_${exp}.pop.h.${styrstart}-${styrend}.nc
-    cdo yearmonmean -selmon,9,10,11 -shifttime,-1mo cat_MOC_${exp}.pop.h.${styrstart}-${styrend}.nc SONmean_MOC_${exp}.pop.h.${styrstart}-${styrend}.nc
+    #cdo yearmonmean -selmon,1,2,12 -shifttime,-1mo cat_MOC_${exp}.pop.h.${styrstart}-${styrend}.nc DJFmean_MOC_${exp}.pop.h.${styrstart}-${styrend}.nc
+    #cdo yearmonmean -selmon,3,4,5 -shifttime,-1mo cat_MOC_${exp}.pop.h.${styrstart}-${styrend}.nc MAMmean_MOC_${exp}.pop.h.${styrstart}-${styrend}.nc
+    #cdo yearmonmean -selmon,6,7,8 -shifttime,-1mo cat_MOC_${exp}.pop.h.${styrstart}-${styrend}.nc JJAmean_MOC_${exp}.pop.h.${styrstart}-${styrend}.nc
+    #cdo yearmonmean -selmon,9,10,11 -shifttime,-1mo cat_MOC_${exp}.pop.h.${styrstart}-${styrend}.nc SONmean_MOC_${exp}.pop.h.${styrstart}-${styrend}.nc
 
     # Calculate climatologies for seasons - each season weighted equally here
-    ncra -d time,${stclimstart},${stclimend} annmean_limited_${exp}.pop.h.${styrstart}-${styrend}.nc ANNclim_${exp}.pop.h.${stclimstart}-${stclimend}.nc
-    ncra -d time,${stclimstart},${stclimend} DJFmean_limited_${exp}.pop.h.${styrstart}-${styrend}.nc DJFclim_${exp}.pop.h.${stclimstart}-${stclimend}.nc
-    ncra -d time,${stclimstart},${stclimend} MAMmean_limited_${exp}.pop.h.${styrstart}-${styrend}.nc MAMclim_${exp}.pop.h.${stclimstart}-${stclimend}.nc
-    ncra -d time,${stclimstart},${stclimend} JJAmean_limited_${exp}.pop.h.${styrstart}-${styrend}.nc JJAclim_${exp}.pop.h.${stclimstart}-${stclimend}.nc
-    ncra -d time,${stclimstart},${stclimend} SONmean_limited_${exp}.pop.h.${styrstart}-${styrend}.nc SONclim_${exp}.pop.h.${stclimstart}-${stclimend}.nc
+    ncra -O -d time,${stclimstart},${stclimend} annmean_limited_${exp}.pop.h.${styrstart}-${styrend}.nc ANNclim_${exp}.pop.h.${stclimstart}-${stclimend}.nc
+    ncra -O -d time,${stclimstart},${stclimend} DJFmean_limited_${exp}.pop.h.${styrstart}-${styrend}.nc DJFclim_${exp}.pop.h.${stclimstart}-${stclimend}.nc
+    ncra -O -d time,${stclimstart},${stclimend} MAMmean_limited_${exp}.pop.h.${styrstart}-${styrend}.nc MAMclim_${exp}.pop.h.${stclimstart}-${stclimend}.nc
+    ncra -O -d time,${stclimstart},${stclimend} JJAmean_limited_${exp}.pop.h.${styrstart}-${styrend}.nc JJAclim_${exp}.pop.h.${stclimstart}-${stclimend}.nc
+    ncra -O -d time,${stclimstart},${stclimend} SONmean_limited_${exp}.pop.h.${styrstart}-${styrend}.nc SONclim_${exp}.pop.h.${stclimstart}-${stclimend}.nc
 
-    ncra -d time,${stclimstart},${stclimend} annmean_MOC_${exp}.pop.h.${styrstart}-${styrend}.nc ANNclim_MOC_${exp}.pop.h.${stclimstart}-${stclimend}.nc
-    ncra -d time,${stclimstart},${stclimend} DJFmean_MOC_${exp}.pop.h.${styrstart}-${styrend}.nc DJFclim_MOC_${exp}.pop.h.${stclimstart}-${stclimend}.nc
-    ncra -d time,${stclimstart},${stclimend} MAMmean_MOC_${exp}.pop.h.${styrstart}-${styrend}.nc MAMclim_MOC_${exp}.pop.h.${stclimstart}-${stclimend}.nc
-    ncra -d time,${stclimstart},${stclimend} JJAmean_MOC_${exp}.pop.h.${styrstart}-${styrend}.nc JJAclim_MOC_${exp}.pop.h.${stclimstart}-${stclimend}.nc
-    ncra -d time,${stclimstart},${stclimend} SONmean_MOC_${exp}.pop.h.${styrstart}-${styrend}.nc SONclim_MOC_${exp}.pop.h.${stclimstart}-${stclimend}.nc
+    #ncra -d time,${stclimstart},${stclimend} annmean_MOC_${exp}.pop.h.${styrstart}-${styrend}.nc ANNclim_MOC_${exp}.pop.h.${stclimstart}-${stclimend}.nc
+    #ncra -d time,${stclimstart},${stclimend} DJFmean_MOC_${exp}.pop.h.${styrstart}-${styrend}.nc DJFclim_MOC_${exp}.pop.h.${stclimstart}-${stclimend}.nc
+    #ncra -d time,${stclimstart},${stclimend} MAMmean_MOC_${exp}.pop.h.${styrstart}-${styrend}.nc MAMclim_MOC_${exp}.pop.h.${stclimstart}-${stclimend}.nc
+    #ncra -d time,${stclimstart},${stclimend} JJAmean_MOC_${exp}.pop.h.${styrstart}-${styrend}.nc JJAclim_MOC_${exp}.pop.h.${stclimstart}-${stclimend}.nc
+    #ncra -d time,${stclimstart},${stclimend} SONmean_MOC_${exp}.pop.h.${styrstart}-${styrend}.nc SONclim_MOC_${exp}.pop.h.${stclimstart}-${stclimend}.nc
 
 
     # Regrid
