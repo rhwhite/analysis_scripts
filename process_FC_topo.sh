@@ -68,7 +68,7 @@ if [ $runocn -eq 1 ]; then
     ncatted -O -a long_name,GlobalMOC,a,c,"GlobalMOC regions = Global Ocean - Marginal Seas\n" ../cat_limited_${exp}.pop.h.${styrstart}-${styrend}.nc
 
     # Delete other file
-    rm ../cat_MOC_limited_${exp}.pop.h.${styrstart}-${styrend}.nc
+    rm ../cat_MOC_${exp}.pop.h.${styrstart}-${styrend}.nc
     
     # move everything back out of toavg directory
     mv toavg/* .
