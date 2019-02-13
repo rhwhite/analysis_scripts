@@ -13,7 +13,7 @@
 module load cdo
 
 dir="/glade/scratch/rachelwh/archive/"
-exp="CAM4POP_NoR_f19"
+exp="CAM4POP_NoMT_f19"
 
 yrstart=1
 yrend=300
@@ -24,13 +24,21 @@ climend=300
 version="cam"
 
 runocn=1
-runatm=0
+runatm=1
+
+# Calculate indices for climatology: given the index counting starts at 0
+idxclimstart="$(($climstart - 1))"
+idxclimend="$(($climend - 1))"
 
 printf -v styrstart "%04d" $yrstart
 printf -v styrend "%04d" $yrend
 
 printf -v stclimstart "%04d" $climstart
 printf -v stclimend "%04d" $climend
+
+printf -v stclimstartidx "%04d" $idxclimstart
+printf -v stclimendidx "%04d" $idxclimend
+
 
 # If runocn = 1 then run the ocean analysis:
 if [ $runocn -eq 1 ]; then
@@ -95,18 +103,15 @@ if [ $runocn -eq 1 ]; then
     #cdo yearmonmean -selmon,6,7,8 -shifttime,-1mo cat_MOC_${exp}.pop.h.${styrstart}-${styrend}.nc JJAmean_MOC_${exp}.pop.h.${styrstart}-${styrend}.nc
     #cdo yearmonmean -selmon,9,10,11 -shifttime,-1mo cat_MOC_${exp}.pop.h.${styrstart}-${styrend}.nc SONmean_MOC_${exp}.pop.h.${styrstart}-${styrend}.nc
 
-    # Calculate climatologies for seasons - each season weighted equally here
-    ncra -O -d time,${stclimstart},${stclimend} annmean_limited_${exp}.pop.h.${styrstart}-${styrend}.nc ANNclim_${exp}.pop.h.${stclimstart}-${stclimend}.nc
-    ncra -O -d time,${stclimstart},${stclimend} DJFmean_limited_${exp}.pop.h.${styrstart}-${styrend}.nc DJFclim_${exp}.pop.h.${stclimstart}-${stclimend}.nc
-    ncra -O -d time,${stclimstart},${stclimend} MAMmean_limited_${exp}.pop.h.${styrstart}-${styrend}.nc MAMclim_${exp}.pop.h.${stclimstart}-${stclimend}.nc
-    ncra -O -d time,${stclimstart},${stclimend} JJAmean_limited_${exp}.pop.h.${styrstart}-${styrend}.nc JJAclim_${exp}.pop.h.${stclimstart}-${stclimend}.nc
-    ncra -O -d time,${stclimstart},${stclimend} SONmean_limited_${exp}.pop.h.${styrstart}-${styrend}.nc SONclim_${exp}.pop.h.${stclimstart}-${stclimend}.nc
-
-    #ncra -d time,${stclimstart},${stclimend} annmean_MOC_${exp}.pop.h.${styrstart}-${styrend}.nc ANNclim_MOC_${exp}.pop.h.${stclimstart}-${stclimend}.nc
-    #ncra -d time,${stclimstart},${stclimend} DJFmean_MOC_${exp}.pop.h.${styrstart}-${styrend}.nc DJFclim_MOC_${exp}.pop.h.${stclimstart}-${stclimend}.nc
-    #ncra -d time,${stclimstart},${stclimend} MAMmean_MOC_${exp}.pop.h.${styrstart}-${styrend}.nc MAMclim_MOC_${exp}.pop.h.${stclimstart}-${stclimend}.nc
-    #ncra -d time,${stclimstart},${stclimend} JJAmean_MOC_${exp}.pop.h.${styrstart}-${styrend}.nc JJAclim_MOC_${exp}.pop.h.${stclimstart}-${stclimend}.nc
-    #ncra -d time,${stclimstart},${stclimend} SONmean_MOC_${exp}.pop.h.${styrstart}-${styrend}.nc SONclim_MOC_${exp}.pop.h.${stclimstart}-${stclimend}.nc
+    # Calculate climatologies for seasons - each season weighted equally
+    # Because we're using NCRA, which starts counting at 0, we need to subtract 1 
+    # from the climstart and climend years to get indices
+    ncra -O -d time,${stclimstartidx},${stclimendidx} annmean_limited_${exp}.pop.h.${styrstart}-${styrend}.nc ANNclim_${exp}.pop.h.${stclimstart}-${stclimend}.nc
+    ncra -O -d time,${stclimstartidx},${stclimendidx} DJFmean_limited_${exp}.pop.h.${styrstart}-${styrend}.nc DJFclim_${exp}.pop.h.${stclimstart}-${stclimend}.nc
+    ncra -O -d time,${stclimstartidx},${stclimendidx} MAMmean_limited_${exp}.pop.h.${styrstart}-${styrend}.nc MAMclim_${exp}.pop.h.${stclimstart}-${stclimend}.nc
+    ncra -O -d time,${stclimstartidx},${stclimendidx} JJAmean_limited_${exp}.pop.h.${styrstart}-${styrend}.nc JJAclim_${exp}.pop.h.${stclimstart}-${stclimend}.nc
+    ncra -O -d time,${stclimstartidx},${stclimendidx} SONmean_limited_${exp}.pop.h.${styrstart}-${styrend}.nc SONclim_${exp}.pop.h.${stclimstart}-${stclimend}.nc
+     
 
 
     # Regrid
